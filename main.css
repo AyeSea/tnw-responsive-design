@@ -1,0 +1,50 @@
+/* General Styling */
+
+
+/* Shared Styling */
+.sub-container {
+	border: 1px solid blue;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+/* Header */
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 48px;
+	background: #fff;
+	box-shadow: 0 0 24px 0 rgba(0,0,0,0.25);
+}
+
+/* Featured Articles */
+#featured-articles {
+	border: 1px solid green;
+	margin-top: 48px;
+	padding: 7px 14px;
+	width: 100%;
+	height: 730px;
+	border-bottom: 1px solid #ececec
+}
+
+/* Latest News */
+#latest-news {
+	height: 550px;
+}
+
+/* Articles by Topic */
+.topic-row {
+	height: 485px;
+}
+
+/* Footer */
+footer {
+	width: 100%;
+	height: 328px;
+	margin: 0 auto;
+	position: relative;
+	background: #000;
+	border-bottom: 4px solid #ff4020;
+}
