@@ -1,8 +1,6 @@
 /* General Styling */
 
-
 /* Shared Styling */
-
 
 .clear {
 	clear: both;
@@ -31,24 +29,34 @@
 }
 
 /* Header Nav Bar */
-#header-nav {
+#header-nav-large {
 	float: left;
 	width: 719px;
 	height: 100%;
-	background-color: blue;
+	background-color: purple;
 }
 
-#header-nav > ul {
+#header-nav-large > ul {
 	width: 100%;
 	height: 100%;
 }
 
-#header-nav li {
+#header-nav-large li {
 	float: left;
 	width: 9.5%;
 	height: 100%;
 	margin: 0 0.25%;
 	background-color: green;
+}
+
+#header-nav-small {
+	display: none;
+	float: left;
+}
+
+#header-nav-smallest {
+	display: none;
+	float: left;
 }
 
 /* Header Social Links & Search */
@@ -127,11 +135,10 @@
 /* Subsection Header (used in .topic-row too) */
 .subsection-header {
 	height: 12.5%;
-	border: 1px solid red;
 }
 
 .subsection-header > h1,
-.subsection-header > a {
+.subsection-header > .large-link {
 	color: #ff4020;
 	font-family: 'Helvetica Neue', sans-serif;
 }
@@ -143,17 +150,21 @@
 	margin-top: 20px;
 }
 
-.subsection-header > h1 > span {
-	font-size: 16px;
+.subsection-header > h1 > .topic-desc {
+	font-size: 0.45em;
 	color: #999;
 	font-weight: 100;
 }
 
-.subsection-header > a {
+.subsection-header > .large-link {
 	float: right;
 	font-size: 16px;
 	font-weight: 700;
 	margin-top: 40px;
+}
+
+.subsection-header > .small-link {
+	display: none;
 }
 
 .subsection-header > a:hover {
@@ -192,7 +203,7 @@
 
 .topic-row {
 	border-top: 1px solid #ececec;
-	height: 485px;
+	height: 490px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -206,14 +217,14 @@
 .topic-article-list {
 	display: inline-block;
 	width: 100%;
-	height: 80%;
+	height: 70%;
 	border: 1px solid black;
 }
 
 .topic-article-list > li {
 	float: left;
 	width: 16%;
-	height: 85%;
+	height: 95%;
 	margin: 0.5% 0;
 	margin-left: 0.55%;
 	background-color: blue;
@@ -241,8 +252,247 @@ footer {
 }
 
 .footer-contents {
-	width: 1150px;
+	max-width: 1150px;
 	margin: 0 auto;
 	height: 100%;
 	background-color: gray;
+}
+
+/* Media Queries - default styling for screen widths greater than 1680px */
+
+/* Max-Width: 1680px */
+@media screen and (max-width: 1680px) {
+	.sixth-topic-article {
+		display: none;
+	}
+
+	.topic-article-list > li {
+		width: 19.25%
+	}
+}
+
+/* Max-Width: 1366px */
+@media screen and (max-width: 1366px) {
+	.fifth-topic-article {
+		display: none;
+	}
+
+	.topic-article-list > li {
+		width: 24.25%;
+	}
+}
+
+/* Max-Width: 1160px */
+@media screen and (max-width: 1160px) {
+	#latest-11,
+	#latest-12 {
+		display: none;
+	}
+
+	#latest-news-articles ul > li {
+		width: 19.25%
+	}
+}
+
+/* Max-Width: 1075px */
+@media screen and (max-width: 1024px) {
+	#header-nav-large {
+		display: none;
+	}
+
+	#header-nav-small {
+		display: inline-block;
+		float: left;
+		height: 100%;
+		width: 75px;
+		background-color: green
+	}
+}
+
+/* Max-Width: 1024px */
+@media screen and (max-width: 1024px) {
+	.fourth-topic-article {
+		display: none;
+	}
+
+	.topic-article-list > li {
+		width: 32.5%;
+	}
+
+	#featured-article-1 {
+		display: block;
+		width: 97.5%;
+		margin: 0 1.25%;
+		height: 100%;
+	}
+
+	.col-1-2 {
+		display: block;
+		height: 50%;
+		width: 100%;
+	}
+
+	#featured-article-2,
+	#featured-article-3,
+	#featured-article-4 {
+		float: left;
+		width: 31.75%;
+		margin-left: 1.15%;
+		height: 100%;
+	}
+
+	#featured-article-3,
+	#featured-article-4 {
+		margin-top: 0;
+	}
+
+}
+
+/* Max-Width: 930px */
+@media screen and (max-width: 930px) {
+	#latest-11,
+	#latest-12 {
+		display: inline-block;
+	}
+
+	#latest-news-articles ul > li {
+		width: 23.5%;
+		height: 30%;
+		margin-left: 1.2%;
+	}
+
+	#latest-news {
+		height: 775px;
+	}
+}
+
+/* Max-Width: 768px */
+@media screen and (max-width: 768px) {
+	#featured-article-1 {
+		height: 100%;
+		width: 100%;
+		display: block;
+		background-color: blue;
+		margin-left: -1px;
+	}
+
+	#featured-article-2,
+	#featured-article-3,
+	#featured-article-4 {
+		display: block;
+		width: 100%;
+		height: 50%;
+		background-color: blue;
+		margin: 5px 0;
+	}
+
+	.col-1-2:first-child {
+		height: 300px
+	}
+
+	.col-1-2:last-child {
+		height: 700px;
+	}
+
+	#featured-articles {
+		height: 1400px;
+	}
+
+	#header-nav-small {
+		display: none;
+	}
+
+	#header-nav-smallest {
+		display: inline-block;
+		float: left;
+		height: 100%;
+		width: 40px;
+		background-color: pink
+	}
+
+	/* Footer elements stack as blocks */
+}
+
+/* Max-Width: 703px */
+@media screen and (max-width: 703px) {
+
+	#latest-news-articles ul > li {
+		width: 31.5%;
+		height: 22.5%;
+		margin: 1.5% 0 1.5% 1.2%;
+		margin-left: 1.2%;
+	}
+
+	#latest-news {
+		height: 1034px;
+	}
+
+	.subsection-header {
+		background-color: #ff4020;
+		height: 35px;
+	  border: 1px solid #fff;
+	}
+
+	.subsection-header > h1 {
+		font-size: 16px;
+		color: #fff;
+		margin: 10px 0 10px 10px;
+	}
+
+	.subsection-header > .large-link {
+		display: none;
+	}
+
+	.subsection-header > .small-link {
+		display: inline-block;
+		float: right;
+		color: #fff;
+		font-size: 30px;
+		font-weight: bold;
+	}
+
+	.topic-desc {
+		display: none;
+	}
+
+	.sub-container {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	.topic-article-list > .sixth-topic-article {
+		display: none;
+	}
+
+
+	.topic-article-list > .first-topic-article {
+		height: 80%;
+	}
+
+	.topic-article-list > li {
+		display: block;
+		width: 100%;
+		height: 12.5%;
+		border-bottom: #ececec;
+	}
+
+	.topic-row {
+		height: 785px;
+	}
+}
+
+/* Max-Width: 639px */
+@media screen and (max-width: 639px) {
+	#latest-news-articles ul > li {
+		width: 47.5%;
+		height: 16%;
+		margin: 0.75% 0 0.75% 1.2%;
+		margin-left: 1.2%;
+	}
+
+	#latest-news {
+		height: 1400px;
+		margin-bottom: -75px;
+	}	
 }
