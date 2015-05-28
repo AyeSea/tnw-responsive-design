@@ -9,7 +9,6 @@ body {
 }
 
 /* Shared Styling */
-
 .clear:before {
 	content: "";
 	display: table;
@@ -472,7 +471,7 @@ body {
 /* Footer */
 #site-footer {
 	width: 100%;
-	height: 328px;
+	height: 380px;
 	margin: 0 auto;
 	position: relative;
 	background: #000;
@@ -494,7 +493,112 @@ body {
 	max-width: 1150px;
 	margin: 0 auto;
 	height: 100%;
-	background-color: gray;
+	padding: 45px 25px;
+	position: relative;
+}
+
+/* Footer - Logo */
+#logo-footer {
+	float: left;
+	display: inline-block;
+	background: url("http://cdn0.tnwcdn.com/wp-content/themes/icetea/lemonsoda/img/tnw.svg") no-repeat;
+	background-size: 115px;
+	height: 30%;
+	width: 15%;
+}
+
+/* Footer - Nav */
+#footer-nav {
+	float: right;
+	margin-top: 25px;
+}
+
+#footer-nav ul {
+	float: right;
+	width: 100%;
+	height: 100%;
+}
+
+#footer-nav li {
+	display: inline-block;
+	float: left;
+	text-transform: uppercase;
+	color: rgb(136, 136, 136);
+	font-weight: 700;
+	margin-right: 10px;
+	font-size: 0.75em;
+}
+
+#footer-nav li:hover {
+	color: #fff;
+}
+
+/* Footer - Social Links and Quote */
+#footer-social-quote {
+	clear: both;
+	display: inline-block;
+	float: left;
+	width: 66%;
+	height: 85%;
+	margin-top: 5px;
+	padding: 20px 0;
+}
+
+/* Footer - Social Links */
+#footer-social {
+	width: 100%;
+	height: 50%;
+}
+
+#footer-social ul {
+	width: 100%;
+	height: 100%;
+}
+
+/* Same as #footer-nav li code. Refactor. */
+#footer-social li {	
+	display: inline-block;
+	float: left;
+	text-transform: uppercase;
+	color: rgb(136, 136, 136);
+	font-weight: 700;
+	margin-right: 10px;
+	font-size: 0.75em;
+}
+
+/* Same as #footer-nav li code. Refactor. */
+#footer-social li:hover {
+	color: #fff;
+}
+
+/* Footer - Quote */
+#quote-content {
+	color: #fff;
+	font-style: italic;
+	font-size: 1.15em;
+}
+
+#quote-author {
+	color: rgb(136, 136, 136);
+	font-size: 0.75em;
+}
+
+/* Footer -Ad */
+#footer-ad {
+	float: right;
+	height: 85%;
+	width: 31.5%;
+	margin-top: 5px;
+	padding: 20px 0;
+	background: url("https://thenextweb.com/wp-content/themes/icetea/lemonsoda/img/maxcdn.png") no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+/* Footer - Copyright */
+#copyright {
+	font-size: 0.75em;
+	color: rgb(120, 120, 120);
 }
 
 /* Media Queries - default styling for screen widths greater than 1680px */
@@ -506,7 +610,7 @@ body {
 	}
 
 	.topic-article-list > li {
-		width: 19.25%
+		width: 19.25%;
 	}
 }
 
@@ -678,7 +782,55 @@ body {
 		background: url('images/menu-icon.png') center center no-repeat;
 	}
 
-	/* Footer elements stack as blocks */
+	/* Footer elements stack as blocks at this width and below */
+	#site-footer {
+	}
+
+	#logo-footer,
+	#footer-nav,
+	#footer-social-quote {
+		display: block;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#footer-ad {
+		display: none;
+	}
+
+	#logo-footer {
+		width: 30%;
+	}
+
+	#footer-nav {
+		height: 7.5%;
+		padding-left: 10%;
+	}
+
+	#footer-nav li {
+		width: 10.5%;
+		margin-left: 0.5%;
+	}
+
+	#footer-social-quote {
+		width: 100%;
+		text-align: center;
+	}
+
+	#footer-social {
+		padding-left: 12.5%;
+	}
+
+	#footer-social li {
+		width: 25%;
+		margin-left: 2.5%
+	}
+
+	#copyright {
+		text-align: center;
+		margin: 0 auto;
+	}
 }
 
 /* Max-Width: 703px */
