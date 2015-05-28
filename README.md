@@ -1,4 +1,4 @@
-# nytimes-css
+# tnw-responsive-design
 Applied responsive web design to recreate the home page for [The Next Web]](http://www.thenextweb.com).
 Preview [here](https://htmlpreview.github.io/?https://github.com/AyeSea/tnw-responsive-design/blob/master/index.html).
 
